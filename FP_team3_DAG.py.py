@@ -1,3 +1,18 @@
+'''
+=================================================
+Final Project
+
+Nama  Team : Team 3
+Anggota    : - Maulana Muhamad Priadhi 		(BTP23120610)
+             - Mangara Haposan Immanuel S. 	(BTP24010818)
+             - Santriana Pratama 			(BTP24010821)
+             - Yohana Tambunan 			    (BTP24010823)
+             - Taufiqurrahman 			    (BTP24010824)
+
+Program ini dibuat untuk melakukan automatisasi transform dan load data dari PostgreSQL. Adapun dataset yang dipakai adalah dataset mengenai data pasien rumah sakit.
+=================================================
+'''
+
 from airflow import DAG
 from datetime import timedelta, datetime
 import psycopg2 as db
@@ -16,7 +31,7 @@ default_args = {
 
 
 # setup configuration to postgresql database
-conn_string = "dbname='lupu' host='host.docker.internal' user='postgres' password='2023'"    
+conn_string = "dbname='final_project' host='host.docker.internal' user='postgres' password='2023'"    
 
 
 ## Fungsi connect to GCS tidak digunakan karena tim tidak memiliki akun GCP
